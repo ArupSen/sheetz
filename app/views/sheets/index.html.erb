@@ -1,0 +1,10 @@
+<h1>Wheel Building with Arup</h1>
+<ul>
+  <% @sheets.each_with_index do |sheet, i| %>
+    <li>Client <%= i + 1 %>: <%= sheet.customer %></li>
+    <p>Received on: <%= sheet.received_date.to_formatted_s(:rfc822) %><br>
+    Rims: <%= sheet.rims %> (<%= sheet.holes %>H)<br>
+    Notes: <%= sheet.info %>
+    </p>
+  <% end %>
+</ul>
