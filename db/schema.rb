@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_12_113522) do
+ActiveRecord::Schema.define(version: 2020_04_17_092358) do
 
   create_table "sheets", force: :cascade do |t|
     t.string "customer"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2020_04_12_113522) do
     t.integer "holes"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "rim_tape"
+    t.integer "rim_erd"
   end
 
 end
