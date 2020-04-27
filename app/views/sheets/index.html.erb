@@ -2,7 +2,7 @@
   <% @sheets.each_with_index do |sheet, i| %>
     <% client = "Client #{i + 1}: #{sheet.customer}" %>
     <li><%= link_to client, sheet_path(sheet) %></li>
-    <p>Received on: <%= sheet.received_date.to_formatted_s(:rfc822) %><br>
+    <p>Received on: <%= uk_date sheet.received_date %><br>
     Rims: <%= sheet.rims %> (<%= sheet.holes %>H)<br>
     Notes: <%= sheet.info %>
     </p>
