@@ -5,4 +5,7 @@ class SheetsController < ApplicationController
   def show
     @sheet = Sheet.find(params[:id])
   end
+  def edit
+    @sheet = Sheet.find(params[:id])
+  end
 end

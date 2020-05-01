@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   get "sheets" => "sheets#index"
   get "sheets/:id" => "sheets#show", as: "sheet"
+  get "sheets/:id/edit" => "sheets#edit", as: "edit_sheet"
 end
