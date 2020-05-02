@@ -13,6 +13,14 @@ class SheetsController < ApplicationController
     @sheet.update(sheet_params)
     redirect_to @sheet
   end
+  def new
+    @sheet = Sheet.new
+  end
+  def create
+    @sheet = Sheet.new(sheet_params)
+    @sheet.save
+    redirect_to @sheet
+  end
 
   private
   def sheet_params
