@@ -10,12 +10,8 @@
   </head>
 
   <body>
-    <header>
-      <h1><%= link_to "Wheel Building with Arup", root_path %></h1>
-    </header>
+    <%= render "layouts/header" %>
     <%= yield %>
-    <footer>
-      <p>&copy; arup sen <%= Time.now.year %></p>
-    </footer>
+    <%= render "layouts/footer" %>
   </body>
 </html>
