@@ -21,6 +21,11 @@ class SheetsController < ApplicationController
     @sheet.save
     redirect_to @sheet
   end
+  def destroy
+    @sheet = Sheet.find(params[:id])
+    @sheet.destroy
+    redirect_to sheets_url
+  end
 
   private
   def sheet_params
