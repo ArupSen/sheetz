@@ -29,6 +29,6 @@ class SheetsController < ApplicationController
 
   private
   def sheet_params
-    params.require(:sheet).permit(:customer, :received_date, :rims, :info, :rim_tape, :holes, :rim_erd)
+    params.require(:sheet).permit(:customer, :received_date, :rims, :info, :rim_tape, :holes, :rim_erd, :spoke_info, :pattern, :new_build)
   end
 end

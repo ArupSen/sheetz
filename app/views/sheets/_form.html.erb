@@ -21,12 +21,28 @@
   <%= f.text_field :rim_tape %>
     </li>
     <li>
+  <%= f.label :spoke_info %>
+  <%= f.text_field :spoke_info %>
+    </li>
+    <li>
+  <%= f.label :pattern %>
+  <%= f.text_field :pattern %>
+    </li>
+    <li>
   <%= f.label :holes %>
   <%= f.number_field :holes %>
     </li>
     <li>
   <%= f.label :rim_erd %>
   <%= f.number_field :rim_erd %>
+    </li>
+    <li>
+      <%= f.label :new_build, "Yes, new build" %>
+      <%= f.radio_button :new_build, true, checked: true %>
+    </li>
+    <li>
+      <%= f.label :new_build, "No, repair job" %>
+      <%= f.radio_button :new_build, false %>
     </li>
     <li>
   <%= f.submit %>

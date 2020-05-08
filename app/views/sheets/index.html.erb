@@ -3,7 +3,7 @@
     <% client = "Client #{i + 1}: #{sheet.customer}" %>
     <li><%= link_to client, sheet_path(sheet) %></li>
     <p>Received on: <%= uk_date sheet.received_date %><br>
-    Rims: <%= sheet.rims %> (<%= sheet.holes %>H)<br>
+    New build?: <%= new_build_text sheet.new_build %><br>
     Notes: <%= sheet.info %>
     </p>
   <% end %>
