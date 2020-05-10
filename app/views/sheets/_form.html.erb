@@ -14,7 +14,7 @@
     </li>
     <li>
   <%= f.label :info %>
-  <%= f.text_area :info, rows: 7 %>
+  <%= f.text_area :info, rows: 7, placeholder: "About this order" %>
     </li>
     <li>
   <%= f.label :rim_tape %>
@@ -22,11 +22,11 @@
     </li>
     <li>
   <%= f.label :spoke_info %>
-  <%= f.text_field :spoke_info %>
+  <%= f.text_field :spoke_info, placeholder: "Sapim Race etc" %>
     </li>
     <li>
   <%= f.label :pattern %>
-  <%= f.text_field :pattern %>
+  <%= f.select :pattern, Sheet::PATTERNS %>
     </li>
     <li>
   <%= f.label :holes %>
