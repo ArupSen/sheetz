@@ -10,16 +10,22 @@ class SheetsController < ApplicationController
   end
   def update
     @sheet = Sheet.find(params[:id])
-    @sheet.update(sheet_params)
-    redirect_to @sheet
+    if @sheet.update(sheet_params)
+      redirect_to @sheet
+    else
+      render :edit
+    end
   end
   def new
     @sheet = Sheet.new
   end
   def create
     @sheet = Sheet.new(sheet_params)
-    @sheet.save
-    redirect_to @sheet
+    if @sheet.save
+      redirect_to @sheet
+    else
+      render :new
+    end
   end
   def destroy
     @sheet = Sheet.find(params[:id])

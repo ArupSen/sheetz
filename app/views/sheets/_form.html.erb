@@ -1,4 +1,7 @@
 <%= form_with(model: sheet, local: true) do |f| %>
+
+  <%= render "shared/errors", object: sheet %>
+
   <ul>
     <li>
   <%= f.label :customer %>
