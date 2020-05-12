@@ -1,54 +1,20 @@
-<%= form_with(model: sheet, local: true) do |f| %>
+<% # https://github.com/bootstrap-ruby/bootstrap_form/blob/master/README.md %>
+<%= bootstrap_form_with(model: sheet, local: true) do |f| %>
 
   <%= render "shared/errors", object: sheet %>
 
-  <ul>
-    <li>
-  <%= f.label :customer %>
   <%= f.text_field :customer %>
-    </li>
-    <li>
-  <%= f.label :received_date %>
   <%= f.date_field :received_date %>
-    </li>
-    <li>
-  <%= f.label :rims %>
   <%= f.text_field :rims %>
-    </li>
-    <li>
-  <%= f.label :info %>
   <%= f.text_area :info, rows: 7, placeholder: "About this order" %>
-    </li>
-    <li>
-  <%= f.label :rim_tape %>
   <%= f.text_field :rim_tape %>
-    </li>
-    <li>
-  <%= f.label :spoke_info %>
   <%= f.text_field :spoke_info, placeholder: "Sapim Race etc" %>
-    </li>
-    <li>
-  <%= f.label :pattern %>
   <%= f.select :pattern, Sheet::PATTERNS %>
-    </li>
-    <li>
-  <%= f.label :holes %>
   <%= f.number_field :holes %>
-    </li>
-    <li>
-  <%= f.label :rim_erd %>
   <%= f.number_field :rim_erd %>
-    </li>
-    <li>
       <%= f.label :new_build, "Yes, new build" %>
       <%= f.radio_button :new_build, true, checked: true %>
-    </li>
-    <li>
       <%= f.label :new_build, "No, repair job" %>
       <%= f.radio_button :new_build, false %>
-    </li>
-    <li>
   <%= f.submit %>
-    </li>
-  </ul>
 <% end %>
