@@ -1,0 +1,7 @@
+<h2>All customers</h2>
+<ul>
+  <% @customers.each do |c| %>
+    <li><%= c.first_name %> <%= c.last_name %> (Email: <%= c.email %>)
+  <br><%= c.notes %></li>
+  <% end %>
+</ul>
