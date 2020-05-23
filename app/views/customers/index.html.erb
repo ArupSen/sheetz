@@ -1,7 +1,7 @@
-<h2>All customers</h2>
+<h2>List of all <%= @customers.all.count %> customers</h2>
 <ul>
   <% @customers.each do |c| %>
-    <li><%= c.first_name %> <%= c.last_name %> (Email: <%= c.email %>)
-  <br><%= c.notes %></li>
+    <li><%= link_to (c.first_name + " " + c.last_name), customer_path(c) %>
+  (<%= c.email %>)
   <% end %>
 </ul>
