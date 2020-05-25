@@ -1,5 +1,5 @@
 <h2>Client Details <%= link_to "[Edit]", edit_customer_path(@customer) %></h2>
-<p>Name: <%= @customer.first_name + " " + @customer.last_name %></p>
+<p>Name: <%= full_name(@customer) %></p>
 <p>Email: <%= @customer.email %></p>
 <p>Phone: <%= @customer.phone %></p>
 <p>Notes: <%= @customer.notes %></p>

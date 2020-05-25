@@ -1,7 +1,7 @@
 <h2>List of all <%= @customers.all.count %> customers</h2>
 <ul>
   <% @customers.each do |c| %>
-    <li><%= link_to (c.first_name + " " + c.last_name), customer_path(c) %>
+    <li><%= link_to full_name(c), customer_path(c) %>
   (<%= c.email %>)
   <% end %>
 </ul>
