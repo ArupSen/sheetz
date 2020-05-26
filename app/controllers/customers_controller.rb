@@ -16,6 +16,17 @@ class CustomersController < ApplicationController
       render :edit
     end
   end
+  def new
+    @customer = Customer.new
+  end
+  def create
+    @customer = Customer.new(customer_params)
+    if @customer.save
+      redirect_to @customer
+    else
+      render :new
+    end
+  end
 
   private
   def customer_params

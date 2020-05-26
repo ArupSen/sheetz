@@ -1,0 +1,8 @@
+<%= bootstrap_form_with(model: customer, local: true, layout: :horizontal) do |f| %>
+  <%= f.text_field :first_name %>
+  <%= f.text_field :last_name %>
+  <%= f.email_field :email %>
+  <%= f.phone_field :phone %>
+  <%= f.text_area :notes %>
+  <%= f.submit %>
+<% end %>
