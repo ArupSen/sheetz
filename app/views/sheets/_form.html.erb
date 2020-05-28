@@ -1,9 +1,8 @@
 <% # https://github.com/bootstrap-ruby/bootstrap_form/blob/master/README.md %>
-<%= bootstrap_form_with(model: sheet, local: true) do |f| %>
+<%= bootstrap_form_with(model: sheet, local: true, layout: :horizontal) do |f| %>
 
   <%= render "shared/errors", object: sheet %>
 
-  <%= f.text_field :customer %>
   <%= f.date_field :received_date %>
   <%= f.text_field :rims %>
   <%= f.text_area :info, rows: 7, placeholder: "About this order" %>
