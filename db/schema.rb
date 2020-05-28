@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_20_135510) do
+ActiveRecord::Schema.define(version: 2020_05_27_084048) do
 
   create_table "customers", force: :cascade do |t|
     t.string "first_name"
@@ -35,6 +35,9 @@ ActiveRecord::Schema.define(version: 2020_05_20_135510) do
     t.string "spoke_info"
     t.string "pattern"
     t.boolean "new_build", default: true
+    t.integer "customer_id", null: false
+    t.index ["customer_id"], name: "index_sheets_on_customer_id"
   end
 
+  add_foreign_key "sheets", "customers"
 end

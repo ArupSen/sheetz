@@ -43,4 +43,64 @@ Customer.create!([
     phone: '07903 911029',
     notes: 'Audax rider'
   },
+  {
+    first_name: 'Racer',
+    last_name: 'Rosa',
+    email: 'diego@racerrosabicycles.co.uk',
+    phone: '07903 911029',
+    notes: 'RR in Walthamstow'
+  },
+  {
+    first_name: 'David',
+    last_name: 'Eserin',
+    email: '',
+    phone: '',
+    notes: 'The e-bike builder'
+  },
+  {
+    first_name: 'Tim',
+    last_name: 'Sydor',
+    email: '',
+    phone: '',
+    notes: 'Wheels that need gold spokes'
+  }
+])
+
+Sheet.create!([
+  {
+    customer_id: 1,
+    received_date: "",
+    rims: "",
+    info: "",
+    holes: 32,
+    rim_tape: "",
+    rim_erd: 595,
+    spoke_info: "",
+    pattern: "",
+    new_build: true,
+  },
+  {
+    customer_id: 1,
+    received_date: "",
+    rims: "",
+    info: "",
+    holes: 32,
+    rim_tape: "",
+    rim_erd: 602,
+    spoke_info: "",
+    pattern: "",
+    new_build: true,
+  },
+  {
+    customer_id: 3,
+    received_date: "",
+    rims: "",
+    info: "",
+    holes: 32,
+    rim_tape: "Velox",
+    rim_erd: 604,
+    spoke_info: "",
+    pattern: "",
+    new_build: true,
+  },
 ])
