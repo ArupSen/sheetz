@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root "sheets#index"
+  root "customers#index"
 
-  resources :sheets
-
-  resources :customers
+  resources :customers do
+    resources :sheets
+  end
 end
