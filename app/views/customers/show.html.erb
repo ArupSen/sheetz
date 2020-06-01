@@ -3,4 +3,5 @@
 <p>Email: <%= @customer.email %></p>
 <p>Phone: <%= @customer.phone %></p>
 <p>Notes: <%= @customer.notes %></p>
+<p><%= link_to "See orders", customer_sheets_path(@customer) %>
 <p><%= link_to "All customers", customers_path %>

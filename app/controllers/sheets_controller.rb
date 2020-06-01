@@ -1,6 +1,7 @@
 class SheetsController < ApplicationController
   def index
-    @sheets = Sheet.all
+    @customer = Customer.find(params[:customer_id])
+    @sheets = @customer.sheets
   end
   def show
     @sheet = Sheet.find(params[:id])
