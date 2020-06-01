@@ -1,5 +1,5 @@
 <% # https://github.com/bootstrap-ruby/bootstrap_form/blob/master/README.md %>
-<%= bootstrap_form_with(model: sheet, local: true, layout: :horizontal) do |f| %>
+<%= bootstrap_form_with(model:[@customer, @sheet], local: true, layout: :horizontal) do |f| %>
 
   <%= render "shared/errors", object: sheet %>
 

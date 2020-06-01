@@ -1,6 +1,8 @@
 class SheetsController < ApplicationController
+
+  before_action :set_customer
+
   def index
-    @customer = Customer.find(params[:customer_id])
     @sheets = @customer.sheets
   end
   def show
@@ -18,12 +20,12 @@ class SheetsController < ApplicationController
     end
   end
   def new
-    @sheet = Sheet.new
+    @sheet = @customer.sheets.new
   end
   def create
-    @sheet = Sheet.new(sheet_params)
+    @sheet = @customer.sheets.new(sheet_params)
     if @sheet.save
-      redirect_to @sheet
+      redirect_to customer_sheets_url(@customer)
     else
       render :new
     end
@@ -37,5 +39,9 @@ class SheetsController < ApplicationController
   private
   def sheet_params
     params.require(:sheet).permit(:customer, :received_date, :rims, :info, :rim_tape, :holes, :rim_erd, :spoke_info, :pattern, :new_build)
+  end
+
+  def set_customer
+        @customer = Customer.find(params[:customer_id])
   end
 end
