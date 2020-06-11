@@ -3,7 +3,8 @@
   <% @sheets.each do |sheet| %>
     <p>Received on: <%= uk_date sheet.received_date %><br>
     New build?: <%= new_build_text sheet.new_build %><br>
-    Notes: <%= sheet.info %>
+    Notes: <%= sheet.info %><br>
+  <%= link_to "full details", customer_sheet_path(@customer, sheet) %>
     </p>
   <% end %>
 </ul>
