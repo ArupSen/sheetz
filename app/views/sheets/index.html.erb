@@ -1,5 +1,5 @@
 <ul>
-  <h3>Orders for <%= full_name @customer %></h3>
+  <h3>Orders for <%= link_to (full_name @customer), (customer_path @customer) %></h3>
   <% @sheets.each do |sheet| %>
     <p>Received on: <%= uk_date sheet.received_date %><br>
     New build?: <%= new_build_text sheet.new_build %><br>

@@ -1,5 +1,5 @@
 <h2>Order details (<%= link_to "Edit", edit_customer_sheet_path(@customer, @sheet) %>) (<%= link_to "Delete", customer_sheet_path(@customer, @sheet), method: :delete, data: {confirm: "Sure about that?"} %>)</h2>
-<p><b>Customer:</b> <%= link_to full_name(@customer), customer_path(@customer) %></p>
+<p><b>Customer:</b> <%= link_to full_name(@customer), customer_path(@customer) %> [<%= link_to "All orders", customer_sheets_path(@customer) %>]</p>
 <p><b>Date recevied:</b> <%= uk_date @sheet.received_date %>
 <p><b>Spoke pattern:</b> <%= @sheet.pattern %>
 <p><b>Spoke make / type:</b> <%= @sheet.spoke_info %>

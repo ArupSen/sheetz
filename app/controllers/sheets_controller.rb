@@ -14,7 +14,7 @@ class SheetsController < ApplicationController
   def update
     @sheet = Sheet.find(params[:id])
     if @sheet.update(sheet_params)
-      redirect_to @sheet
+      redirect_to customer_sheet_url(@customer, @sheet)
     else
       render :edit
     end
