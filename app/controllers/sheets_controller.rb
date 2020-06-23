@@ -7,9 +7,17 @@ class SheetsController < ApplicationController
   end
   def show
     @sheet = Sheet.find(params[:id])
+    sheet_ids = []
+    sheets = @customer.sheets
+    sheets.each do |s|
+      sheet_ids.push(s.id)
+    end
+    @sheet_count = sheets.count
+    @position_in_list = sheet_ids.index(@sheet.id) + 1
   end
   def edit
     @sheet = Sheet.find(params[:id])
+    @sheet_count = @customer.sheets.count
   end
   def update
     @sheet = Sheet.find(params[:id])

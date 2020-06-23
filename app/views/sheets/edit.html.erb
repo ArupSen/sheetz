@@ -1,2 +1,2 @@
-<h2>Editing client: <%= @sheet.id %> details</h2>
+<h2>Editing <%= full_name(@sheet.customer) %>, order <%= @sheet.id %> of <%= @sheet_count %></h2>
 <%= render "form", sheet: @sheet %>

@@ -11,9 +11,9 @@
   <%= f.select :pattern, Sheet::PATTERNS %>
   <%= f.number_field :holes %>
   <%= f.number_field :rim_erd %>
-      <%= f.label :new_build, "Yes, new build" %>
-      <%= f.radio_button :new_build, true, checked: true %>
-      <%= f.label :new_build, "No, repair job" %>
-      <%= f.radio_button :new_build, false %>
+  <%= f.form_group :new_build, label: {text: "New / repair"} do %>
+    <%= f.radio_button :new_build, true, label: "New build", checked: true %>
+    <%= f.radio_button :new_build, false, label: "Repair" %>
+  <% end %>
   <%= f.submit %>
 <% end %>
